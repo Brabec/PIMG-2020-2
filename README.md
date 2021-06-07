@@ -22,7 +22,14 @@ Este formato de imagem necessita de um cabeçalho, contendo o **identificador** 
 
 
 
-### 1. Definição do Problema.
+### 1. Definição do Problema
+
+Nesta primeira etapa do projeto devemos ler uma imagem no formato PBM, realizar a remoção de ruídos como o do tipo Sal e Pimenta que deverá ser removido utilizando o ***filtro de mediana*** e também realizar a melhora do contraste utilizando ***histograma***.
+
+
+
+Um ruído do tipo Sal e Pimenta o aquele onde existem impurezas em determinado intervalo da imagem, perceba que onde deveria haver um pixel preto está um pixel branco (sal) e onde deveria estar um pixel branco está com pixel preto (pimenta). Este ruído é resolvido utilizando o filtro de mediana.
+
 
 
 
