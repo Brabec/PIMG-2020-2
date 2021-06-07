@@ -31,6 +31,16 @@ Nesta primeira etapa do projeto devemos ler uma imagem no formato PBM, realizar 
 Um ruído do tipo Sal e Pimenta o aquele onde existem impurezas em determinado intervalo da imagem, perceba que onde deveria haver um pixel preto está um pixel branco (sal) e onde deveria estar um pixel branco está com pixel preto (pimenta). Este ruído é resolvido utilizando o filtro de mediana.
 
 
+[![Ruído Sal e Pimenta](./README/images/salt_n_pepper.jpeg)](#)
+
+
+
+
+Outro problema que poderemos resolver será o caso de haver um trecho de caracteres que está com o pouco contraste, utilizando histograma será possível identificar a frequência de pixel nas regiões e conseguir distribuir os níveis de cores na imagem.
+[![Histograma](./README/images/histogram.png)](#)
+
+
+
 
 
 ### 1. Projeto e implementação da solução
