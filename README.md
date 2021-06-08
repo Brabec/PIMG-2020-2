@@ -22,7 +22,7 @@ Este formato de imagem necessita de um cabeçalho, contendo o **identificador** 
 
 
 
-### 1. Definição do Problema
+### 2. Definição do Problema
 
 Nesta primeira etapa do projeto devemos ler uma imagem no formato PBM, realizar a remoção de ruídos como o do tipo Sal e Pimenta que deverá ser removido utilizando o ***filtro de mediana*** e também realizar a melhora do contraste utilizando ***histograma***.
 
@@ -35,9 +35,15 @@ Um ruído do tipo Sal e Pimenta é aquele onde existem impurezas em determinado 
 
 
 
-### 1. Projeto e implementação da solução
+Outro problema que lidamos nesta etapa do projeto foi adicionar os ruídos às imagens. Mesmo seguindo o passo-a-passo dado em sala de aula os arquivos tiveram problemas em converter do Arquivo de Documento Portátil (PDF) para as imagens PBM.
+Então, para a resolução deste problema paralelo ao projeto foi realizado o fluxo de converter os textos, sem ruido, que estavam em formato PDF (já convertidos de Documento, a partir do [Google Docs](https://docs.google.com)) utilizando o site [Convertio](https://convertio.co/pdf-pbm/). Assim, após transformar o arquivo PDF em PBM, abrimos o arquivo pelo GIMP e transformamos o tipo de dados de RAW para ASCII. Até este ponto as imagens ainda não possuiam os ruídos, então utilizando a função ```noisy``` foi adicionado os ruídos nas imagens que em outro momento será aplicado o filtro de mediana.
 
-Utilizando a filtragem espacial não linear **filtro da Mediana**, onde condicionamos o valor de um pixel a partir da vizinhaça dele.
+
+
+
+### 3. Projeto e implementação da solução
+
+Utilizando a filtragem espacial não linear **filtro da Mediana**, onde condicionamos o valor de um pixel a partir da vizinhaça dele conseguimos remover os ruídos de Sal e Pimenta, onde aqui chamaremos de S&P.
 
 A implementação de solução para este ruído é seguindo o seguinte modelo:
 Primeio é selecionado uma região 3x3 da imagem, logo em seguida essa região é ordenada e o valor central da mediana é aplicado naquele pixel.
@@ -75,11 +81,13 @@ Assim, após todas as aplicações do filtro da mediana obteremos o mapa de pixe
 | 23  | 23  |   0 |
 
 
-### 1. Resultados Obtidos
+Após conseguir o mapa de pixel, salvamos o arquivo em outro arquivo contendo o nome do grupo e a quantidade de linhas e palavras, que foram contadas manualmente.
+
+### 4. Resultados Obtidos
 
 
 
-### 1. Conclusão
+### 5. Conclusão
 
 
 
