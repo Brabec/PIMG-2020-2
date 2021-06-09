@@ -21,6 +21,7 @@ Imagens PBM, ou Portable BitMap, são imagens que possuem cada pixel sendo atrib
 
 Este formato de imagem necessita de um cabeçalho, contendo o **identificador** do tipo de imagem, que neste caso é o *P1*, em seguida as dimensões do arquivo, sendo a largura e altura. É importante lembrar que dentre os outros formatos estudados este não precisa utilizar o valor máximo do pixel, pois é possível apenas utilizar *0* ou *1*.
 
+----------------------------------
 
 
 ### 2. Definição do Problema
@@ -48,6 +49,7 @@ Então, para a resolução deste problema paralelo ao projeto foi realizado o fl
 
 
 
+----------------------------------
 
 ### 3. Projeto e implementação da solução
 
@@ -71,6 +73,7 @@ Assim, para aplicar o filtro, será representada como um vetor [42, 3, 147, 0, 2
 
 | Indíce | Valor inicial | Valor final | 
 | ------ | ------------- | ----------- |
+|    0   |       42      |      42     |
 |    1   |       3       |      42     |
 |    2   |       147     |      23     |
 |    3   |       0       |      42     |
@@ -91,6 +94,10 @@ Assim, após todas as aplicações do filtro da mediana obteremos o mapa de pixe
 
 Após conseguir o mapa de pixel, salvamos o resultado em outro arquivo contendo o nome do grupo e a quantidade de linhas e palavras, que foram contadas manualmente.
 
+
+
+----------------------------------
+
 ### 4. Resultados Obtidos
 
 Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
@@ -104,21 +111,28 @@ Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
 
 Nas imagens da esquerda foi aplicado o ruído de S&P com peso 0.5, já do lado direito a imagem filtrada.
 
+
+----------------------------------
+
 ### 5. Conclusão
 
-Após aplicar o filtro de S&P (trecho abaixo) é percepctível a diferença na identificação das palavras do texto.
+Após aplicar o filtro de S&P (trecho abaixo) é perceptível a diferença na identificação das palavras do texto.
 
 ![median_filter.py](./README/images/median_filter.py.png)
 
 
-É importante também destacar que, para lidar com a vizinhaça fora das bordas foi utilizado o *helper* ```getValue``, que, em caso de estar fora dos limites da imagem considera que os valores extrapolados será o valor 0.
+É importante também destacar que, para lidar com a vizinhaça fora das bordas foi utilizado o *helper* ```getValue```, que, em caso de estar fora dos limites da imagem considera que os valores extrapolados será o valor 0.
 
 
 ![getValue.py](./README/images/getValue.py.png)
 
 > Helper que irá adicionar 0 para posições fora dos limites da imagem
 >
-> Exemplificando: Considerando a posição do extremo superior esquerdo, os valores de pixel na imagem seriam os valores ```[ None, None, None, None, 0, 1, None, 2, 3 ]```, tendo os valores atribuídos como `None` estando fora dos limites da imagem e os valores númericos sendo a posição do pixel lendo-se como um vetor, como na tabela abaixo.
+> Exemplificando:
+>
+> Considerando a posição do extremo superior esquerdo, os valores de pixel na imagem seriam os valores ```[ None, None, None, None, 0, 1, None, 2, 3 ]```, tendo os valores atribuídos como `None` estando fora dos limites da imagem e os valores númericos sendo a posição do pixel lendo-se como um vetor, como na tabela abaixo.
+>
+
 
 |       |       |       |
 | ----  | ----- | ----- |
