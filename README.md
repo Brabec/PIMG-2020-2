@@ -10,6 +10,7 @@
 
 ## Disciplina: Processamento de Imagens
 ## Professora: Beatriz Trinchão Andrade
+## Alunos: Jocelino Alves Pereira Neto e Lucas Brabec Barreto Santana
 
 
 
