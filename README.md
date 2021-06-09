@@ -17,7 +17,7 @@
 
 ### 1. Introdução
 
-Imagens PBM, ou Portable BitMap, são imagens que possuem cada pixel sendo atribuido por 0 que corresponde à cor preta e 1 que corresponde com a cor branca.
+Imagens PBM, ou Portable BitMap, são imagens que possuem cada pixel sendo atribuido por 1 que corresponde à cor preta e 0 que corresponde com a cor branca.
 
 Este formato de imagem necessita de um cabeçalho, contendo o **identificador** do tipo de imagem, que neste caso é o *P1*, em seguida as dimensões do arquivo, sendo a largura e altura. É importante lembrar que dentre os outros formatos estudados este não precisa utilizar o valor máximo do pixel, pois é possível apenas utilizar *0* ou *1*.
 
@@ -85,6 +85,15 @@ Assim, após todas as aplicações do filtro da mediana obteremos o mapa de pixe
 Após conseguir o mapa de pixel, salvamos o resultado em outro arquivo contendo o nome do grupo e a quantidade de linhas e palavras, que foram contadas manualmente.
 
 ### 4. Resultados Obtidos
+
+Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
+
+| Imagem com ruído | Imagem após filtro aplicado |
+| ---------------- | --------------------------- |
+| 
+| [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-noised.png)](#) | [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-filtered.png)](#)  |
+| [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-noised.png)](#) | [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-filtered.png)](#)  |
+| [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-noised.png)](#) | [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-filtered.png)](#)  |
 
 
 
