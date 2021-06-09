@@ -118,5 +118,14 @@ Após aplicar o filtro de S&P (trecho abaixo) é percepctível a diferença na i
 
 > Helper que irá adicionar 0 para posições fora dos limites da imagem
 >
-> Considerando a posição do extremo superior esquerdo, os valores de pixel na imagem seriam os valores ```[ None, None, None, None, 0, 1, None, 2, 3 ]```, tendo os valores atribuídos como `None` estando fora dos limites da imagem. Após aplicada na função *helper* ```getValue``` os valores da lista passariam a ser limitado e passariam a ser lidos como ```[ 0, 0, 0, 0, 0, 1, 0, 2, 3 ]```.
+> Exemplificando: Considerando a posição do extremo superior esquerdo, os valores de pixel na imagem seriam os valores ```[ None, None, None, None, 0, 1, None, 2, 3 ]```, tendo os valores atribuídos como `None` estando fora dos limites da imagem e os valores númericos sendo a posição do pixel lendo-se como um vetor, como na tabela abaixo.
+
+|       |       |       |
+| ----  | ----- | ----- |
+| None  | None  |  None |
+| None  |   0   |    1  |
+| None  |   2   |    3  |
+
+
+Após aplicada na função *helper* ```getValue``` os valores da lista passariam a ser limitado e passariam a ser lidos como ```[ 0, 0, 0, 0, 0, 1, 0, 2, 3 ]```.
 
