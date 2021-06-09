@@ -85,6 +85,15 @@ Após conseguir o mapa de pixel, salvamos o arquivo em outro arquivo contendo o 
 
 ### 4. Resultados Obtidos
 
+Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
+
+| Imagem com ruído | Imagem após filtro aplicado |
+| ---------------- | --------------------------- |
+| 
+| [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-noised.png)](#) | [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-filtered.png)](#)  |
+| [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-noised.png)](#) | [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-filtered.png)](#)  |
+| [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-noised.png)](#) | [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-filtered.png)](#)  |
+
 
 
 ### 5. Conclusão
