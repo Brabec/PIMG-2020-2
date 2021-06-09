@@ -41,6 +41,13 @@ Então, para a resolução deste problema paralelo ao projeto foi realizado o fl
 
 
 
+[![noisy.py](./README/images/noisy.py.png)](#)
+
+> Função que adiciona ruído de Sal e Pumenta
+
+
+
+
 
 ### 3. Projeto e implementação da solução
 
@@ -96,8 +103,21 @@ Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
 | [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-noised.png)](#) | [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-filtered.png)](#)  |
 
 
+Nas imagens da esquerda foi aplicado o ruído de S&P com peso 0.5, já do lado direito a imagem filtrada.
 
 ### 5. Conclusão
 
+Após aplicar o filtro de S&P (trecho abaixo) é percepctível a diferença na identificação das palavras do texto.
 
+[![median_filter.py](./README/images/median_filter.py.png)](#)
+
+
+É importante também destacar que, para lidar com a vizinhaça fora das bordas foi utilizado o *helper* ```getValue``, que, em caso de estar fora dos limites da imagem considera que os valores extrapolados será o valor 0.
+
+
+[![getValue.py](./README/images/getValue.py.png)](#)
+
+> Helper que irá adicionar 0 para posições fora dos limites da imagem
+>
+> Considerando a posição do extremo superior esquedo, os valores de pixel na imagem seriam os valores ```[ None, None, None, None, 0, 1, None, 2, 3 ]```, tendo os valores atribuídos como `None` estando fora dos limites da imagem. Após aplicada na função *helper* ```getValue``` os valores da lista passariam a ser limitado e passariam a ser lidos como ```[ 0, 0, 0, 0, 0, 1, 0, 2, 3 ]```.
 
