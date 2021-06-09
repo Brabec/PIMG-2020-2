@@ -32,7 +32,7 @@ Nesta primeira etapa do projeto devemos ler uma imagem no formato PBM, realizar 
 Um ruído do tipo Sal e Pimenta é aquele onde existem impurezas em determinado intervalo da imagem, perceba que onde deveria haver um pixel preto está um pixel branco (sal) e onde deveria estar um pixel branco está com pixel preto (pimenta). Este ruído é resolvido utilizando o filtro de mediana.
 
 
-[![Ruído Sal e Pimenta](./README/images/salt_n_pepper.jpeg)](#)
+![Ruído Sal e Pimenta](./README/images/salt_n_pepper.jpeg)
 
 
 
@@ -41,7 +41,7 @@ Então, para a resolução deste problema paralelo ao projeto foi realizado o fl
 
 
 
-[![noisy.py](./README/images/noisy.py.png)](#)
+![noisy.py](./README/images/noisy.py.png)
 
 > Função que adiciona ruído de Sal e Pumenta
 
@@ -97,10 +97,9 @@ Após aplicar os filtros de mediana, obtivemos os seguintes resultados:
 
 | Imagem com ruído | Imagem após filtro aplicado |
 | ---------------- | --------------------------- |
-| 
-| [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-noised.png)](#) | [![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-filtered.png)](#)  |
-| [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-noised.png)](#) | [![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-filtered.png)](#)  |
-| [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-noised.png)](#) | [![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-filtered.png)](#)  |
+| ![Imagem 1](./README/images/cthulhu-noised.png) | ![grupo_4_imagem_48_linhas_253_palavras.pbm](./README/images/cthulhu-filtered.png) |
+| ![Imagem 2](./README/images/dis-noised.png)     | ![grupo_4_imagem_80_linhas_431_palavras.pbm](./README/images/dis-filtered.png)     |
+| ![Imagem 3](./README/images/42-noised.png)      | ![grupo_4_imagem_109?_linhas_423_palavras.pbm](./README/images/42-filtered.png)    |
 
 
 Nas imagens da esquerda foi aplicado o ruído de S&P com peso 0.5, já do lado direito a imagem filtrada.
@@ -109,13 +108,13 @@ Nas imagens da esquerda foi aplicado o ruído de S&P com peso 0.5, já do lado d
 
 Após aplicar o filtro de S&P (trecho abaixo) é percepctível a diferença na identificação das palavras do texto.
 
-[![median_filter.py](./README/images/median_filter.py.png)](#)
+![median_filter.py](./README/images/median_filter.py.png)
 
 
 É importante também destacar que, para lidar com a vizinhaça fora das bordas foi utilizado o *helper* ```getValue``, que, em caso de estar fora dos limites da imagem considera que os valores extrapolados será o valor 0.
 
 
-[![getValue.py](./README/images/getValue.py.png)](#)
+![getValue.py](./README/images/getValue.py.png)
 
 > Helper que irá adicionar 0 para posições fora dos limites da imagem
 >
